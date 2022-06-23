@@ -20,7 +20,7 @@ return (
           </ul>
         </nav> 
         <Switch>
-          <Route path='/app-costumers'>
+          <Route path='/app-customers'>
             <AppCustomers />
           </Route>
           <Route path='/app-products'>
