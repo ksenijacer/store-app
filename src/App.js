@@ -12,18 +12,18 @@ return (
         <nav>
           <ul>
             <li>
-              <Link to='/appcustomers'>App customers</Link>
+              <Link to='/app-customers'>App customers</Link>
             </li>
             <li>
-              <Link to='/appproducts'>App products</Link>
+              <Link to='/app-products'>App products</Link>
             </li>
           </ul>
         </nav> 
         <Switch>
-          <Route path='/appcostumers'>
+          <Route path='/app-costumers'>
             <AppCustomers />
           </Route>
-          <Route path='/appproducts'>
+          <Route path='/app-products'>
             <AppProducts />
           </Route>
         </Switch>
