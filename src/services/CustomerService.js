@@ -10,7 +10,7 @@ class CustomersService {
         ]
     }
     getAll() {
-     return this.customers;
+     return [...this.customers];
     }
 
 

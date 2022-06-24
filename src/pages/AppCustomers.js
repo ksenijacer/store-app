@@ -1,12 +1,16 @@
 import { useLayoutEffect, useState } from "react"
 import React from 'react';
 import CustomerService from "../services/CustomerService";
+import { useRouteMatch } from "react-router-dom";
+import LatestPurchases from "../LatestPurchases";
+import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
+
 
 
 function AppCustomers() {
     const [customers, setCustomers] = useState(CustomerService.getAll());
 
-
+    let match = useRouteMatch();
 
     const [newCustomer, setNewCustomer] = useState({
         name: '',
@@ -40,6 +44,7 @@ function AppCustomers() {
           name: '',
           age: ''
         });
+        
       }
     return (
         <div>
@@ -51,7 +56,8 @@ function AppCustomers() {
                 {customers.map((customer, index) => (
                     <li key={index}>{customer.name}, {customer.age}
                     <button onClick={() => handleRemove(index)}>Remove</button>
-                    </li>
+                    <button><Link to={`/customers/${customer.id}`}>Latest purchases</Link>
+                    </button></li>
                     ))}
                     
             </ul>

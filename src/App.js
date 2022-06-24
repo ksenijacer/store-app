@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import AppCustomers from './pages/AppCustomers';
 import AppProducts from './pages/AppProducts'
+import LatestPurchases from './LatestPurchases';
 
 
 function App() {
@@ -25,6 +26,9 @@ return (
           </Route>
           <Route path='/app-products'>
             <AppProducts />
+          </Route>
+          <Route path='/app-customers/:id'>
+            <LatestPurchases />
           </Route>
         </Switch>
       </div>
