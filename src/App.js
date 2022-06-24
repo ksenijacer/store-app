@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import AppCustomers from './AppCustomers';
-import AppProducts from './AppProducts'
+import AppCustomers from './pages/AppCustomers';
+import AppProducts from './pages/AppProducts'
 
 
 function App() {
